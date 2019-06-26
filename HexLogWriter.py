@@ -34,10 +34,15 @@ def writer(log_path, save_path):
 	                offset_str = line[:19]
 	                offset_dt = datetime.datetime.strptime(offset_str, '%Y-%m-%d %H:%M:%S')
 	                inact.append(offset_dt)
-	                
+    
+
+	df['mouse_id'] = np.full(len(trials), '')
 	df['trial'] = trials
 	df['timestamp_start_trial'] = act
 	df['timestamp_end_trial'] = inact
+	df['start_location'] = np.full(len(trials), '')
+	df['goal_location'] = np.full(len(trials), '')
+	df['Path'] = np.full(len(trials), '')
 
 	writer = pd.ExcelWriter(save_path, engine='xlsxwriter')
 	df.to_excel(writer, sheet_name='sheet1')
