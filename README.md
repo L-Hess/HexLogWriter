@@ -12,3 +12,7 @@ How to run the script:
 3. Input the path to the directory in which the excel sheet needs to be saved (for example C:\Users\Gebruiker\Documents\HexLogWriter)
 4. ???
 5. Profit
+
+Important notes:
+Trial count continues for the entire log file (thus after mouse 1 is done, the counter keeps going on for the next mouse), these thus need to be adjusted when inputting the rest of the data.
+Sometimes the log file contains no 'real' trials, these then need to be deleted from the excel sheet.
