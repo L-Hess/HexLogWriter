@@ -5,7 +5,7 @@ import argparse
 from pathlib import Path
 
 
-def writer(log_path, save_path):
+def excel_writer(log_path, save_path):
 	df = pd.DataFrame()
 
 	trials = []
@@ -52,4 +52,4 @@ if __name__ == '__main__':
 
 	log_path = input('Please enter the path to the log file: ')
 	save_path = input('Please enter the directory to which the excel file needs to be saved: ') + '\\timestamps.xlsx'
-	writer(log_path=log_path, save_path=save_path)
+	excel_writer(log_path=log_path, save_path=save_path)
